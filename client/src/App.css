@@ -1,0 +1,43 @@
+.postBody img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.postBody pre {
+  overflow: auto;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+}
+
+.postBody a {
+  color: #9dd6ff;
+}
+
+.ql-editor {
+  color: #000 !important;
+  min-height: 300px;
+}
+
+.ql-editor.ql-blank::before {
+  color: #999 !important;
+}
+
+.ql-container {
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.ql-snow .ql-stroke {
+  stroke: #444;
+}
+
+.ql-snow .ql-fill {
+  fill: #444;
+}
+
+.ql-toolbar.ql-snow {
+  border-color: #ccc;
+}
+
+

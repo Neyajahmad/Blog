@@ -6,7 +6,7 @@ import { api } from '../api';
 import { useAuth } from '../auth/AuthContext';
 
 export default function Editor() {
-  const { id } = useParams(); // "new" or Mongo id
+  const { id } = useParams();
   const isNew = id === 'new';
   const { user, loading } = useAuth();
   const nav = useNavigate();
@@ -165,7 +165,6 @@ async function pickAndUploadImage(quillRef) {
       const form = new FormData();
       form.append('image', file);
 
-      // Don't set Content-Type header - axios sets it automatically with boundary for FormData
       const res = await api.post('/uploads/image', form);
 
       const editor = quillRef.current?.getEditor();

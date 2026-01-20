@@ -8,11 +8,12 @@ const router = express.Router();
 function setAuthCookie(res, token) {
   res.cookie('token', token, {
     httpOnly: true,
-    sameSite: 'lax',
-    secure: false,
+    secure: true,       
+    sameSite: 'None',    
     maxAge: 1000 * 60 * 60 * 24 * 7,
   });
 }
+
 
 router.post('/register', async (req, res) => {
   try {
